@@ -1,0 +1,12 @@
+# vendor cache
+vendor
+.env
+
+# tmp file create for log of air or tmp file when air feature is running
+tmp
+
+# for ignore database
+sqlite.db
+
+# for ignore workspace word store by vscode
+.vscode
