@@ -25,5 +25,5 @@ func main() {
 		return c.SendString("Hello, World!")
 	})
 
-	app.Server().ListenAndServe(os.ExpandEnv(`:${PORT}`))
+	app.Listen(os.ExpandEnv(`:${PORT}`))
 }
