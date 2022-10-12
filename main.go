@@ -19,11 +19,15 @@ func ConnectENV() {
 
 func main() {
 	ConnectENV()
+	fmt.Println("not need env")
 	app := fiber.New()
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World!")
 	})
-
-	app.Listen(os.ExpandEnv(`:${PORT}`))
+	fmt.Println("Listen app")
+	err := app.Listen(os.ExpandEnv(`:${PORT}`))
+	if err != nil {
+		fmt.Println("Listen===>", err)
+	}
 }
