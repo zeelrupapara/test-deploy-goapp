@@ -1,6 +1,5 @@
 # vendor cache
 vendor
-.env
 
 # tmp file create for log of air or tmp file when air feature is running
 tmp
