@@ -1,4 +1,4 @@
-module github.com/test-netify
+module test-go-deploy
 
 go 1.17
 

@@ -1,1 +1,1 @@
-web: app
+web: bin/test-go-deploy
