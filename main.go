@@ -18,17 +18,17 @@ func ConnectENV() {
 }
 
 func main() {
-	fmt.Println("after load env")
 	ConnectENV()
-	fmt.Println("not need env")
 	app := fiber.New()
 
 	app.Get("/", func(c *fiber.Ctx) error {
 		return c.SendString("Hello, World!")
 	})
-	fmt.Println("Listen app")
+
+	app.Static("/favicon.ico", "./public/image/favicon.ico") 
+	
 	err := app.Listen(os.ExpandEnv(`:${PORT}`))
 	if err != nil {
-		fmt.Println("Listen===>", err)
+		fmt.Println(err)
 	}
 }
