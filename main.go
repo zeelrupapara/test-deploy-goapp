@@ -18,6 +18,7 @@ func ConnectENV() {
 }
 
 func main() {
+	fmt.Println("after load env")
 	ConnectENV()
 	fmt.Println("not need env")
 	app := fiber.New()
